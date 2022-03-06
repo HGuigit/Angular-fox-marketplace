@@ -1,13 +1,19 @@
-.grid-container{
+#main-page-container{
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: #872EE0;
+}
+
+.grid-containerHeadFoot{
     display: grid;
     grid-template-columns: 1fr 10fr 1fr;
     grid-column-start: 1;
     grid-column-end: 12;
+    height: 70px;
 }
 .footer-header{
     background-color: #FB8EF0;
     width: 100%;
-    height: 35px;
 }
 .line{
     grid-column: 1 / 12;
@@ -15,10 +21,27 @@
 .line-out{
     opacity: 0;
 }
-
-.tab-r{
-    border-radius: 0px 0px 0px 20px;
+.tab-r-t{
+    border-radius: 0px 0px 0px 100px;
 }
-.tab-l{
-    border-radius: 0px 0px 20px 0px;
+.tab-l-t{
+    border-radius: 0px 0px 100px 0px;
+}
+.tab-l-b{
+    border-radius: 0px 100px 0px 0px;
+}
+.tab-r-b{
+    border-radius: 100px 0px 0px 0px;
+}
+
+.bottom-footer{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+
+.top-header{
+    position: absolute;
+    top: 0px;
+    width: 100%;
 }
