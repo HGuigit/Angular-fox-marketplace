@@ -1,7 +1,9 @@
 #main-page-container{
-    min-height: 100vh;
+    min-height: 210vh;
     min-width: 100vw;
-    background-color: #872EE0;
+    background-color: #EDE3E3;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .grid-containerHeadFoot{
@@ -12,8 +14,9 @@
     height: 70px;
 }
 .footer-header{
-    background-color: #FB8EF0;
+    background-color: #000000;
     width: 100%;
+    z-index: 1;
 }
 .line{
     grid-column: 1 / 12;
@@ -35,13 +38,87 @@
 }
 
 .bottom-footer{
-    position: absolute;
+    position: relative;
     bottom: 0px;
     width: 100%;
 }
 
 .top-header{
-    position: absolute;
+    position: relative;
     top: 0px;
     width: 100%;
+}
+
+#logo-section{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+#logo{
+    margin: 0px auto 0px;
+    background-image: url("../../assets/icons/fire-opacity.png");
+    background-repeat: no-repeat;
+    background-position: 50% 5%;
+    background-size: 60%;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}   
+
+#logo-img{
+    width: 50%;
+    height: 50%;
+}
+
+#logo-text-box{
+    margin: 10px auto 10px;
+    font-size: larger;
+    padding: 20px 100px;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#logo-text-box > h1{
+    letter-spacing: 2px;
+    font-weight: bolder;
+}
+#logo-text-box > h3 {
+    
+    margin: 30px 0px;
+    font-weight: 550;
+}
+
+#logo-text-box > button {
+    padding: 15px 60px;
+    border-radius: 10px;
+    font-size: 18px;
+    background-color: rgba(230, 99, 24, 0.514);
+    align-self: center;
+    font-weight: bolder;
+    border: 0px;
+    box-shadow: 1px 1px 5px;
+}
+
+#logo-text-box > button:hover {
+    background-color: rgba(230, 24, 24, 0.72);
+    color: white;
+    cursor: pointer;
+}
+
+#rocket-section{
+    background-color: #201E21;
+}
+
+.section{
+    height: 70vh;
 }
