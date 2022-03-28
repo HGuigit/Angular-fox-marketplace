@@ -40,22 +40,25 @@ export class MainPageComponent implements OnInit {
       }
     }
     // Estilização de movimento do foguete
-    let rocketId : string = 'rocket-img'
-    let rocketImg = document.getElementById(rocketId) as HTMLElement
-    // Vai começar a mexer quando estiver no intervalo entre metade do primeiro retangulo e final dos segundo retangulo (primeira seção e no final da segunda seção)
-    if(window.scrollY > documentHeight/6  && window.scrollY < (documentHeight/3)*2 + documentHeight/6){ 
-       //detectando sentido do scroll
-       let st = document.documentElement.scrollTop
-
-       if (st > lastScrollTop){
-        rocketMarginBottom += 12
-        rocketImg.style.marginBottom = rocketMarginBottom + 'px' 
-      } else {
-        rocketMarginBottom -= 12
-        rocketImg.style.marginBottom = rocketMarginBottom + 'px' 
+  
+      let rocketId : string = 'rocket-img'
+      let rocketImg = document.getElementById(rocketId) as HTMLElement
+      // Vai começar a mexer quando estiver no intervalo entre metade do primeiro retangulo e final dos segundo retangulo (primeira seção e no final da segunda seção)
+      if(window.scrollY > documentHeight/6  && window.scrollY < (documentHeight/3)*2 + documentHeight/6){ 
+        //detectando sentido do scroll
+        let st = document.documentElement.scrollTop
+        if(window.innerWidth > 1000){
+          if (st > lastScrollTop){
+            rocketMarginBottom += 12
+            rocketImg.style.marginBottom = rocketMarginBottom + 'px' 
+          } else {
+            rocketMarginBottom -= 12
+            rocketImg.style.marginBottom = rocketMarginBottom + 'px' 
+          }
+        }
+        lastScrollTop = st;
       }
-      lastScrollTop = st;
-    }
+    
 
   });
 

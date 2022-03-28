@@ -1,5 +1,8 @@
+
+/* CSS main configuration and desktop config */
+
 #main-page-container{
-    min-height: 210vh;
+    min-height: 210%;
     min-width: 100vw;
     background-color: #EDE3E3;
     overflow-y: scroll;
@@ -30,7 +33,6 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 }
 
@@ -39,7 +41,7 @@
     background-image: url("../../assets/icons/fire-opacity.png");
     background-repeat: no-repeat;
     background-position: 50% 18%;
-    background-size: 60%;
+    background-size: 400px;
     width: 40%;
     height: 100%;
     display: flex;
@@ -48,8 +50,8 @@
 }   
 
 #logo-img{
-    width: 50%;
-    height: 50%;
+    width: 350px;
+    height: 300px;
 }
 
 #nav-bar-logo{
@@ -98,7 +100,7 @@
 #logo-text-box{
     margin: 10px auto 10px;
     font-size: larger;
-    padding: 20px 100px;
+    padding: 20px 40px;
     width: 60%;
     height: 100%;
     display: flex;
@@ -110,8 +112,7 @@
     letter-spacing: 2px;
     font-weight: bolder;
 }
-#logo-text-box > h3 {
-    
+#logo-text-box > h3 {  
     margin: 30px 0px;
     font-weight: 550;
 }
@@ -124,7 +125,7 @@
     align-self: center;
     font-weight: bolder;
     border: 0px;
-    box-shadow: 1px 1px 5px;
+    box-shadow: 1px 1px 1px;
 }
 
 #logo-text-box > button:hover {
@@ -135,35 +136,36 @@
 
 #rocket-section{
     background-color: #201E21;
-}
-
-.section{
-    height: 70vh;
-}
-
-#rocket-section{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
+.section{
+    height: 70vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 #rocket-box{
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 60%;
     align-items: center;
     justify-content: center;
     font-size: 18px;
     color: #EDE3E3;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: 100%;
+    margin: 10px;
+    padding: 20px 40px;
 }
 #rocket-box-img{
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 40%;
     align-items: center;
     justify-content: end;
     overflow: hidden;
+    height: 100%;
 }
 #rocket-img{
     width: 250px;
@@ -172,14 +174,13 @@
 }
 
 #rocket-box > h1{
-    margin: 30px 0px;
+    letter-spacing: 2px;
+    font-weight: bolder;
 }
 
 #rocket-box > h3{
     margin: 30px 0px;
-    text-align: justify;
 }
-
 #bottom-footer{
     bottom: 0px;
     width: 100%;
@@ -223,6 +224,10 @@
     padding: 10px;
 }
 
+.color-icon:hover{
+    color: white;
+}
+
 #icons-list > li{
     padding: 10px;
 }
@@ -231,3 +236,107 @@
     color: rgba(230, 24, 24, 0.72);
 }
 
+#fox-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#fox-gif-box{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#fox-section-text-box > button{
+    padding: 15px 60px;
+    border-radius: 10px;
+    font-size: 18px;
+    background-color: rgba(230, 99, 24, 0.514);
+    align-self: center;
+    font-weight: bolder;
+    border: 0px;
+    box-shadow: 1px 1px 5px;
+    margin-top: 60px;
+}
+#fox-section-text-box > button:hover {
+    background-color: rgba(230, 24, 24, 0.72);
+    color: white;
+    cursor: pointer;
+}
+
+
+#fox-section-text-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+    text-align: center;
+    padding: 20px 40px
+}
+
+/* CSS mobile configuration*/
+
+@media only screen and (max-width: 1000px){
+    #logo-section{
+        flex-direction: column;
+    }
+    #logo{
+        width: 100%;
+        background-image: none;
+        margin-top: 50px;
+    }
+    #logo-text-box{
+        width: 100%;
+        
+    }
+    #logo-img{
+        width: 300px;
+        height: 250px;
+    }
+    .section{
+        height: 70%;
+    }
+
+    #rocket-section{
+        flex-direction: column;
+    }
+    #rocket-box{
+        width: 100%;
+        height: 50%;
+    }
+    #rocket-box-img{
+        width: 100%;
+        height: 50%;
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+    #rocket-img{
+        width: 200px;
+        height: 300px;
+    }
+    
+    #rocket-box > h3{
+        margin: 10px 0px;
+    }
+    #fox-section{
+        flex-direction: column;
+    }
+    #fox-section-text-box{
+        width: 100%;
+        height: 50%;
+    }
+    #fox-section-text-box > h1{
+        text-overflow: clip;
+    }
+    #fox-gif-box{
+        width: 100%;
+        height: 50%;
+    }
+}
